@@ -20,7 +20,6 @@ import com.usjr.finalsexam.adapters.VideoListAdapter;
 import com.usjr.finalsexam.entity.Video;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class VideoListFragment extends Fragment implements AdapterView.OnItemClickListener {
 
@@ -73,7 +72,7 @@ public class VideoListFragment extends Fragment implements AdapterView.OnItemCli
             String Keychanged = dataSnapshot.getKey();
             int IndexChanged = mItemKeys.indexOf(Keychanged);
             Video i = dataSnapshot.getValue(Video.class);
-            mAdapter.set(IndexChanged, i);
+           // mAdapter.set(IndexChanged, i);
         }
 
         @Override
@@ -82,7 +81,7 @@ public class VideoListFragment extends Fragment implements AdapterView.OnItemCli
             int IndexRemoved = mItemKeys.indexOf(KeyRemoved);
             Log.d("chan", String.valueOf(IndexRemoved));
             mItemKeys.remove(KeyRemoved);
-            mAdapter.remove(IndexRemoved);
+           // mAdapter.remove(IndexRemoved);
 
         }
 
