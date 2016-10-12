@@ -66,6 +66,7 @@ public class VideoListAdapter extends BaseAdapter {
         }
 
         mVideos.add(video);
+        notifyDataSetChanged();
     }
 
     public class ViewHolder {
@@ -74,6 +75,7 @@ public class VideoListAdapter extends BaseAdapter {
 
         public ViewHolder(View itemView) {
             tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
+            imgThumbnail= (ImageView) itemView.findViewById(R.id.imgThumbnail);
         }
     }
 }
